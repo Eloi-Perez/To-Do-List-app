@@ -8,6 +8,8 @@ function newItem() {
         alert('You must write something!');
     } else {
         $('#list').append(li);
+        $('#input').val('');
+        $("input").focus();
     }
 
     //2. Crossing out an item from the list of items:
@@ -28,6 +30,5 @@ function newItem() {
 
     // 4. Reordering the items: 
     $('#list').sortable();
-
-
+    
 }
