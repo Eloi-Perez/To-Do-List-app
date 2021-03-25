@@ -8,6 +8,8 @@ function newItem() {
         alert('You must write something!');
     } else {
         $('#list').append(li);
+        $('#input').val('');
+        $("input").focus();
     }
 
     //2. Crossing out an item from the list of items:
@@ -16,7 +18,7 @@ function newItem() {
     }
     li.on('dblclick', crossOut);
 
-    //3(i). Adding the delete button "X": 
+    //3(i). Adding the delete button "X":
     let crossOutButton = $('<crossOutButton></crossOutButton>');
     crossOutButton.append(document.createTextNode('X'));
     li.append(crossOutButton);
@@ -26,8 +28,7 @@ function newItem() {
         li.addClass('delete');
     }
 
-    // 4. Reordering the items: 
+    // 4. Reordering the items:
     $('#list').sortable();
-
 
 }
